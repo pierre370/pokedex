@@ -35,13 +35,27 @@ export default function TilePokemon(props) {
 
 const styles = StyleSheet.create({
     block: {
+        position: "relative",
         width: "30%",
-        height: "70%",
-        marginLeft:  15,
-        marginBottom:  10, backgroundColor:  '#FAE5D3', borderWidth:  2, justifyContent:  'center',alignItems:  'center'
+        marginLeft:  4,
+        marginBottom:  5, backgroundColor:  '#FAE5D3', borderWidth:  2, justifyContent:  'center',alignItems:  'center',margin: 10,borderRadius: 45,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 7,
+        },
+        shadowOpacity: 0.41,
+        shadowRadius: 9.11,
+        elevation: 14,
     },
     Logo: {
-        width: "140%",
-        height: "80%",
+        flex: 1,
+        marginTop: 2,
+        marginBottom:  5,
+        padding: 50,
+        width: "20%",
+        height: "20%",
+
+
     },
 });
