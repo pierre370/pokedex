@@ -27,7 +27,6 @@ export default function HomeScreen() {
 
     return (
         <View style={styles.container}>
-            <Text>POKEDEX</Text>
             <StatusBar style="auto" />
             <FlatList
                 numColumns={3}
@@ -45,10 +44,7 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        width: "100%",
-        height: "20%",
         backgroundColor: '#C1D0F2',
         alignItems: 'center',
-
     },
 });

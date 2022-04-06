@@ -25,7 +25,7 @@ export default function Navigation(){
                 <Tab.Screen options={{title: "Pokedex", headerTintColor: "white", headerStyle: {backgroundColor: "red"} }}
                             name="Home"
                             component={PokemonStack}/>
-                <Tab.Screen options={{headerTintColor: "white", headerStyle: {backgroundColor: "red"} }} name="Research" component={Home}
+                <Tab.Screen options={{headerTintColor: "white", headerStyle: {backgroundColor: "red"} }} name="Recherche" component={Home}
                 />
                 <Tab.Screen options={{headerTintColor: "white", headerStyle: {backgroundColor: "red"} }} name="Teams" component={Home}/>
                 <Tab.Screen options={{headerTintColor: "white", headerStyle: {backgroundColor: "red"} }} name="Profils" component={Home}/>
