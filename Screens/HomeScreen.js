@@ -3,14 +3,9 @@ import { StyleSheet, Text,Image,FlatList, View } from 'react-native';
 import React, { useState, useEffect } from 'react';
 import {getPokemons} from "../API/pokemonAPI";
 import TilePokemon from "../components/TilePokemon";
-import Navigation from "../Navigation/Navigation";
 
-export default function HomeScreen() {
+function HomeScreen({navigation}) {
 
-    const displayColor = (text) => {
-        console.log(text);
-    }
-    const [isShowingText, setIsShowingText] = useState(true);
     const [listPokemon, setListPokemon] = useState([]);
     const [nextPage,setNextPage] = useState("https://pokeapi.co/api/v2/pokemon")
 
@@ -32,7 +27,7 @@ export default function HomeScreen() {
                 numColumns={3}
                 data={listPokemon}
                 keyExtractor={(item) => item.name}
-                renderItem={({item}) => <TilePokemon name={item.name} url={item.url} /> }
+                renderItem={({item}) => <TilePokemon navigation={navigation}  name={item.name} url={item.url} /> }
                 onEndReachedThreshold={0.5}
                 onEndReached={() => {
                     loadPokemon(nextPage)
@@ -40,7 +35,7 @@ export default function HomeScreen() {
         </View>
     );
 }
-
+export default HomeScreen;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
