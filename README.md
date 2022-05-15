@@ -1,6 +1,6 @@
 # pokedex
 
-Source 
+Sources
 
 https://reactnative.dev/docs/getting-started
 
