@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2c9426e-946e-4208-afec-38a0dad6f56a" name="Changes" comment="">
+    <list default="true" id="b2c9426e-946e-4208-afec-38a0dad6f56a" name="Changes" comment="fix/master">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Navigation/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/Navigation/Navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/Screens/HomeScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/TilePokemon.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/TilePokemon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screens/PokemonDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/Screens/PokemonDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Screens/RechercheScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/Screens/RechercheScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/pokeLoader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/SearchBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -30,7 +32,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feat/PokedexIntegration" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -81,7 +83,19 @@
       <workItem from="1651061000077" duration="13576000" />
       <workItem from="1652022102241" duration="3358000" />
       <workItem from="1652185343099" duration="3971000" />
+      <workItem from="1652190669018" duration="622000" />
+      <workItem from="1652277820385" duration="3801000" />
+      <workItem from="1652357520468" duration="8489000" />
+      <workItem from="1652623670198" duration="2666000" />
     </task>
+    <task id="LOCAL-00001" summary="fix/master">
+      <created>1652190704891</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1652190704892</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,5 +112,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix/master" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix/master" />
   </component>
 </project>

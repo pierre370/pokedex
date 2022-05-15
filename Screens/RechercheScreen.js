@@ -1,60 +1,69 @@
-import React, { useState, useEffect } from "react";
-import {
-    StyleSheet,
-    Text,
-    SafeAreaView,
-    ActivityIndicator,
-} from "react-native";
-import List from "../components/List";
+import { Text, TextInput, Button, StyleSheet } from "react-native"
+import { useState, useEffect } from 'react';
+import { SafeAreaView } from "react-native-safe-area-context"
+import {getPokemons} from "../API/pokemonAPI";
 import SearchBar from "../components/SearchBar";
 
-const RechercheScreen = () => {
-    const [searchPhrase, setSearchPhrase] = useState("");
-    const [clicked, setClicked] = useState(false);
-    const [fakeData, setFakeData] = useState([]);
+export default  function  RechercheScreen(props) {
+    const [search, setSearch] = useState("")
+    const [isPokemonFound, setIsPokemonFound] = useState(false)
+    const [pokemon, setPokemon] = useState({})
 
-    // get data from the fake api endpoint
     useEffect(() => {
-        const getData = async () => {
-            const apiResponse = await fetch(
-                "https://pokeapi.co/api/v2/pokemon"
-            );
-            const data = await apiResponse.json();
-            setFakeData(data);
-        };
-        getData();
-    }, []);
+        if (isPokemonFound) {
+            props.navigation.navigate('ResultSearch',{
+                itemId: pokemon.id,
+                name: pokemon.name,
+                img_front: pokemon.sprites.front_default,
+                img_back: pokemon.sprites.front_shiny,
+                type: pokemon.types[0].type.name,
+            })
+            setIsPokemonFound(false)
+        }
+    }, [isPokemonFound])
 
-    return (
-        <SafeAreaView style={styles.root}>
-            {!clicked && <Text style={styles.title}>Pokemon</Text>}
+    return(
+        <SafeAreaView style={styles.container}>
             <SearchBar
-                searchPhrase={searchPhrase}
-                setSearchPhrase={setSearchPhrase}
-                clicked={clicked}
-                setClicked={setClicked}
+                searchPhrase={search}
+                setSearchPhrase={setSearch}
+                clicked={isPokemonFound}
+                setClicked={setIsPokemonFound}
+                onPress={() => {searchPokemon(search, setPokemon, setIsPokemonFound)}}
             />
-                <List
-                searchPhrase={searchPhrase}
-                data={fakeData}
-                setClicked={setClicked}
-                />
+            <Button style={styles.button}
+                onPress={() => {searchPokemon(search, setPokemon, setIsPokemonFound)}}
+                title="Rechercher"
+                    color="red"
+            />
         </SafeAreaView>
-    );
-};
+    )
+}
 
-export default RechercheScreen;
+const searchPokemon = (pokemonName,setPokemon, isPokemonFound) => {
+    getPokemons("https://pokeapi.co/api/v2/pokemon/"+pokemonName.toLowerCase()).then(res => {
+        if (res) {
+            setPokemon(res)
+            isPokemonFound(true)
+        }
+    })
+}
 
 const styles = StyleSheet.create({
-    root: {
-        justifyContent: "center",
-        alignItems: "center",
+    container: {
+        display: 'flex',
+        backgroundColor: '#C1D0F2',
+        alignItems: 'center',
+        height: '100%'
     },
-    title: {
-        width: "100%",
-        marginTop: 20,
-        fontSize: 25,
-        fontWeight: "bold",
-        marginLeft: "10%",
+    textInput: {
+        width:  '80%',
+        backgroundColor: 'lightgrey',
+        marginBottom: '5%',
+        padding: 15,
+        borderStyle: 'solid',
+        borderColor: 'black',
+        borderWidth: 3,
+        borderRadius: 10,
     },
 });
