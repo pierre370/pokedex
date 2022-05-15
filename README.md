@@ -1,9 +1,13 @@
 # pokedex
 
 Source 
+
 https://reactnative.dev/docs/getting-started
+
 https://react-native-async-storage.github.io/async-storage/docs/usage/
+
 https://reactnavigation.org/docs/tab-based-navigation/
+
 ...
 
 ![International_Pokémon_logo svg](https://user-images.githubusercontent.com/91948963/168480165-160e0cdc-1c22-4dd8-80b3-06024d751791.png)
